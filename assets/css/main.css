@@ -1,0 +1,428 @@
+@import 'https://fonts.googleapis.com/css?family=Acme|Courgette|Gentium+Book+Basic|Harmattan|Satisfy|Fredericka+the+Great|Oswald';
+
+/*
+ * It is an attempt to sort styles with their properties,
+ * such as widht, height, margin and padding, for example.
+ * It means better seeing elements with equal sizes. 
+ * Properly the design created without any template 
+ * will be managed in the light way.
+ * Property all together there are in dev tools if I need them.
+/*
+  ========================================
+  Grid
+  ========================================
+*/
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/*
+  ========================================
+  Images
+  ========================================
+*/
+
+.photo img {
+    max-width: 100%;
+    heigh: auto;
+    border-radius: 50%;
+}
+
+/* 
+ * Display and Position
+ * ========================================
+ */
+
+.top-menu {
+    position: fixed;
+    z-index: 10;
+}
+
+.top-menu nav a {
+    display: inline-block;
+}
+
+.part {
+    position: relative;
+}
+
+.items div a,
+label,
+input,
+textarea,
+.social-menu a {
+    display: block;
+}
+
+/* 
+ * Sizes
+ * ========================================
+ */
+
+.top-menu {    
+    width: 100vw;
+}
+
+.top-menu nav {
+    width: fit-content;
+}
+
+.items div a,
+label,
+input,
+textarea,
+.social-menu a {
+    width: 100%;
+}
+
+.part {
+    min-height: 100vh;
+}
+
+section section {
+    max-width: 960px;
+}
+
+.items div {
+    width: 350px;
+    height: 300px;
+}
+
+.feedback {
+    min-height: fit-content;
+}
+
+/* 
+ * Поля и отступы
+ * ========================================
+ */
+
+/* Center */
+
+.top-menu nav,
+section section {
+    margin: 0 auto;
+}
+
+.social-menu a,
+input,
+textarea,
+.items div,
+.feedback {
+    margin: .5rem auto;
+}
+
+.top-menu,
+hr,
+.social-menu,
+.photo {
+    margin-top: 3rem;
+}
+
+.part:not(:last-child) {
+    margin-top: -2rem;
+    margin-bottom: 10rem; 
+}
+
+.feedback {
+    padding: 1rem;
+}
+
+.part {
+    padding: 6rem 1rem;       
+}
+
+.top-menu nav a,
+.social-menu a,
+p, 
+dt,
+dd,
+.items div a,
+.feedback *,
+input,
+textarea { 
+    padding: .5rem 1rem;
+}
+
+/* 
+ * Vertical Centring
+ * ========================================
+ */
+
+.main-header:before,
+.items div:before,
+#fourth section:first-child:before {
+    content: '';
+    display: inline-block;
+}
+
+.main-header:before {
+    height: 25vh;
+}
+
+.items div:before {
+    vertical-align: bottom;
+    height: 150px;
+}
+
+/*
+  ========================================
+  Text and Fonts
+  ========================================
+*/
+ 
+.top-menu,
+header,
+#first,
+.photo,
+.social-menu {
+    text-align: center;
+}
+
+.top-menu a,
+.social-menu a,
+.items a,
+#fourth .feedback label {
+    text-transform: uppercase;
+}
+
+body,
+a,
+.top-menu a,
+#fourth .feedback label {
+    font-size: 1.3rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+dt {
+    font-size: 1.4rem;
+}
+
+a {    
+    text-decoration: none;
+}
+
+.social-menu,
+dt,
+.items,
+input,
+textarea {
+    font-weight: bold;
+}
+
+body {
+    font-family: 'Satisfy', cursive;
+}
+
+h1 {
+    font-family: 'Fredericka the Great', cursive;
+}
+
+h2 {
+    font-family: 'Courgette', cursive;
+}
+
+a,
+input[type="submit"],
+.feedback label {
+    font-family: 'Gentium Book Basic', serif;
+}
+
+/*
+  ========================================
+  Font And Border Colors
+  ========================================
+*/
+
+input {
+    outline: none;
+}
+
+body,
+a,
+input[type="submit"] {    
+    background: none;
+    color: rgba( 255, 255, 255, .8 );
+}
+
+input,
+textarea,
+.social-menu a {
+    border-radius: 5px;
+    border-width: 3px;
+    border-style: double;
+    border-color: rgba( 255, 255, 255, .8 );
+}
+
+.items a,
+input:not(:last-child),
+textarea {
+    color: rgba( 61, 60, 58, .9 );
+    border-color: rgba( 61, 60, 58, .9 );
+}
+
+.social-menu a,
+.feedback {
+    color: rgba( 255, 255, 255, .8 );
+}
+
+.items a,
+#fourth .feedback label {
+    text-shadow: 
+        0.5px 0.5px rgba( 254, 252, 255, 0.7 ), 
+        0.5px 0.5px rgba( 223, 190, 170, 0.6 );
+}
+
+input,
+textarea {
+    background-color: rgba( 254, 252, 255, 0.7 );
+}
+
+/*
+  ========================================
+  Backgrounds
+  ========================================
+*/
+
+body {
+    background-image: url( '../img/body.jpg' );
+}
+
+#first:before {
+    background: url( '../img/first.jpg' );
+}
+
+#second:before {
+    background: url( '../img/second.jpg' );
+}
+
+#third:before {
+    background: url( '../img/third.jpg' );
+}
+
+#fourth:before {
+    background: url( '../img/fourth.jpg' );
+}
+
+/* 
+ * Все четыре фона в псеводоэлементах,
+ * иначе прозрачность повлияет на все содержимое
+ */
+body,
+#first:before,
+#second:before,
+#third:before,
+#fourth:before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Эти свойства не должны влиять на body */
+#first:before,
+#second:before,
+#third:before,
+#fourth:before {
+    opacity: .9;
+    z-index: -1;    
+}
+
+/*
+  ========================================
+  Effects
+  ========================================
+*/
+
+.top-menu a:hover,
+.social-menu a:hover {
+    color: rgba( 61, 60, 58, .7);
+    background-color: rgba( 255, 255, 255, .8 );
+}
+
+.social-menu a:hover {
+    border: 3px double rgba( 61, 60, 58, .7);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.top-menu,
+.feedback,
+.items div {
+    background-repeat: no-repeat;
+    background-size: 200% 100%, auto, 100% 1px, 100% 1px, 100% 1px, 100% 1px;
+    background-position: 200% 0, 0 0, 0 0, 0 100%, 0 2px, 0 calc( 99% ); 
+    background-image: 
+        linear-gradient( 45deg, 
+            rgba( 254, 252, 255, 0 ) 30%, 
+            rgba( 254, 252, 255, .8 ), 
+            rgba( 254, 252, 255, 0 ) 70% ), 
+        linear-gradient( to right, 
+            rgba( 254, 252, 255, .3 ), 
+            rgba( 254, 252, 255, 0 ) 20%, 
+            rgba( 254, 252, 255, 0 ) 90%, 
+            rgba( 254, 252, 255, .3 ) ), 
+        linear-gradient( to right, 
+            rgba( 125, 125, 125, .3 ), 
+            rgba( 254, 252, 255, .9 ) 45%, 
+            rgba( 125, 125, 125, .5 ) ), 
+        linear-gradient(to right, 
+            rgba( 125, 125, 125, .3 ), 
+            rgba( 254, 252, 255, .9 ) 45%, 
+            rgba( 125, 125, 125, .5 ) ), 
+        linear-gradient(to right, 
+            rgba( 223, 190, 170, .3 ), 
+            rgba( 254, 252, 255, .9 ) 45%, 
+            rgba( 223, 190, 170, .5 ) ), 
+        linear-gradient(to right, 
+            rgba( 223, 190, 170, .3 ), 
+            rgba( 254, 252, 255, .9 ) 45%, 
+            rgba( 223, 190, 170, .5 ) );
+}
+
+.social-menu,
+.feedback:hover,
+.items div:hover {  
+    transition: .3s linear;
+    background-position: -200% 0, 0 0, 0 0, 0 100%, 0 2px, 0 calc( 99% );
+}
+
+.items a {
+    background-image: 
+        linear-gradient( 0deg, 
+            rgba( 0, 0, 0, .1 ), 
+            rgba( 0, 0, 0, 0 ) 50%, 
+            rgba( 0, 0, 0, .1 ) ),  
+        linear-gradient( 0deg, 
+            rgba( 255, 255, 255, .1 ), 
+            rgba( 255, 255, 255, 0) 50%,
+            rgba( 255, 255, 255, .1) );
+    background-image: -webkit-radial-gradient(50% 100%, ellipse cover, 
+            rgba( 0, 0, 0, 0), rgba( 0, 0, 0, 0 ) 50% );
+}
+
+/* Для повышения читаемости */
+.part {
+    background: -webkit-linear-gradient( to left, 
+        rgba( 142, 158, 171, 1 ), rgba(238, 242, 243, 1 ) );
+    
+}
