@@ -14,20 +14,19 @@
 */
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
-/*
-  ========================================
-  Images
-  ========================================
-*/
+/* 
+ * Images
+ * ========================================
+ */
 
 .photo img {
     max-width: 100%;
-    heigh: auto;
+    height: auto;
     border-radius: 50%;
 }
 
@@ -38,7 +37,7 @@
 
 .top-menu {
     position: fixed;
-    z-index: 10;
+    z-index: 2;
 }
 
 .top-menu nav a {
@@ -152,18 +151,18 @@ textarea {
  * ========================================
  */
 
-.main-header:before,
-.items div:before,
-#fourth section:first-child:before {
+.main-header::before,
+.items div::before,
+#fourth section:first-child::before {
     content: '';
     display: inline-block;
 }
 
-.main-header:before {
+.main-header::before {
     height: 25vh;
 }
 
-.items div:before {
+.items div::before {
     vertical-align: bottom;
     height: 150px;
 }
@@ -298,51 +297,55 @@ textarea {
   ========================================
 */
 
+body { min-height: 1000px; }
+
 body {
     background-image: url( '../img/body.jpg' );
+    background-attachment: fixed;
 }
 
-#first:before {
-    background: url( '../img/first.jpg' );
+body,
+#first::before,
+#second::before,
+#third::before,
+#fourth::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /*will-change: transform;*/
 }
 
-#second:before {
-    background: url( '../img/second.jpg' );
-}
-
-#third:before {
-    background: url( '../img/third.jpg' );
-}
-
-#fourth:before {
-    background: url( '../img/fourth.jpg' );
+/* Эти свойства не должны влиять на body */
+#first::before,
+#second::before,
+#third::before,
+#fourth::before {
+    opacity: .9;
+    z-index: -1;    
 }
 
 /* 
  * Все четыре фона в псеводоэлементах,
  * иначе прозрачность повлияет на все содержимое
  */
-body,
-#first:before,
-#second:before,
-#third:before,
-#fourth:before {
-    content: '';
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
+#first::before {
+    background: url( '../img/first.jpg' );
 }
 
-/* Эти свойства не должны влиять на body */
-#first:before,
-#second:before,
-#third:before,
-#fourth:before {
-    opacity: .9;
-    z-index: -1;    
+#second::before {
+    background: url( '../img/second.jpg' );
+}
+
+#third::before {
+    background: url( '../img/third.jpg' );
+}
+
+#fourth::before {
+    background: url( '../img/fourth.jpg' );
 }
 
 /*
@@ -425,4 +428,31 @@ a:hover {
     background: -webkit-linear-gradient( to left, 
         rgba( 142, 158, 171, 1 ), rgba(238, 242, 243, 1 ) );
     
+}
+
+/*
+  ========================================
+  For IE and Edge personally
+  ========================================
+*/
+/* Так в IE не дергается фиксированный бэкграунд */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    html{
+        overflow: hidden;
+        height: 100%;    
+    }
+    body{
+        overflow: auto;
+        height: 100%;
+    }
+}
+
+/* Персональное повторение для Edge */
+#first::before,
+#second::before,
+#third::before,
+#fourth::before {
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-size: cover;
+    will-change: transform;
 }

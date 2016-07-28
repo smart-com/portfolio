@@ -8,4 +8,4 @@
 
 #### Обновления
 
-> **1.0**: HTML, CSS, Normalize.css, Responsive Design ( Chrome, Mozilla, Opera )
+> **1.0**: HTML, CSS, Normalize.css, Responsive Design ( Chrome, Mozilla, Opera, IE, Edge )
