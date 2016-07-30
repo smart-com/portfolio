@@ -20,17 +20,6 @@
 }
 
 /* 
- * Images
- * ========================================
- */
-
-.photo img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
-}
-
-/* 
  * Display and Position
  * ========================================
  */
@@ -65,10 +54,6 @@ textarea,
     width: 100vw;
 }
 
-.top-menu nav {
-    width: fit-content;
-}
-
 .items div a,
 label,
 input,
@@ -77,17 +62,25 @@ textarea,
     width: 100%;
 }
 
-.part {
-    min-height: 100vh;
-}
-
 section section {
     max-width: 960px;
 }
 
+blockquote,
 .items div {
-    width: 350px;
-    height: 300px;
+    width: 85vw;
+}
+
+.top-menu nav {
+    width: fit-content;
+}
+
+.part {
+    min-height: 100vh;
+}
+
+.items div {
+    height: 50vh;
 }
 
 .feedback {
@@ -99,26 +92,14 @@ section section {
  * ========================================
  */
 
-/* Center */
-
-.top-menu nav,
-section section {
-    margin: 0 auto;
+.top-menu {
+    margin-top: 3rem;
 }
 
-.social-menu a,
-input,
-textarea,
-.items div,
-.feedback {
-    margin: .5rem auto;
-}
-
-.top-menu,
 hr,
 .social-menu,
 .photo {
-    margin-top: 3rem;
+    margin-top: 5rem;
 }
 
 .part:not(:last-child) {
@@ -126,15 +107,18 @@ hr,
     margin-bottom: 10rem; 
 }
 
+.top-menu nav a {
+    padding: .5rem 1rem;
+}
+
 .feedback {
     padding: 1rem;
 }
 
 .part {
-    padding: 6rem 1rem;       
+    padding: 3rem 1rem;       
 }
 
-.top-menu nav a,
 .social-menu a,
 p, 
 dt,
@@ -143,11 +127,39 @@ dd,
 .feedback *,
 input,
 textarea { 
-    padding: .5rem 1rem;
+    padding: .2rem 1rem;
 }
 
 /* 
- * Vertical Centring
+ * Horizontal Centring
+ * ========================================
+ */
+
+.top-menu nav,
+section section {
+    margin: 0 auto;
+}
+
+blockquote, 
+.items div {
+    margin: 2rem auto;
+}
+
+.social-menu a,
+input,
+textarea,
+.feedback {
+    margin: .4rem auto;
+}
+
+#first,
+.photo,
+.social-menu {
+    text-align: center;
+}
+
+/* 
+ * Vertical Alingment
  * ========================================
  */
 
@@ -159,12 +171,12 @@ textarea {
 }
 
 .main-header::before {
-    height: 25vh;
+    height: 9rem;
 }
 
 .items div::before {
     vertical-align: bottom;
-    height: 150px;
+    height: 8rem;
 }
 
 /*
@@ -173,26 +185,13 @@ textarea {
   ========================================
 */
  
-.top-menu,
-header,
-#first,
-.photo,
-.social-menu {
-    text-align: center;
+body {
+    font-size: 17px;
 }
 
-.top-menu a,
-.social-menu a,
-.items a,
-#fourth .feedback label {
-    text-transform: uppercase;
-}
-
-body,
 a,
-.top-menu a,
-#fourth .feedback label {
-    font-size: 1.3rem;
+label {
+    font-size: 1rem;
 }
 
 h1 {
@@ -200,27 +199,15 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 h3 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
 }
 
 dt {
     font-size: 1.4rem;
-}
-
-a {    
-    text-decoration: none;
-}
-
-.social-menu,
-dt,
-.items,
-input,
-textarea {
-    font-weight: bold;
 }
 
 body {
@@ -235,10 +222,38 @@ h2 {
     font-family: 'Courgette', cursive;
 }
 
-a,
+.items,
+label,
 input[type="submit"],
-.feedback label {
+a {
     font-family: 'Gentium Book Basic', serif;
+}
+
+.top-menu,
+header {
+    text-align: center;
+}
+
+.top-menu a,
+.social-menu a {
+    text-transform: uppercase;
+}
+
+.items a,
+label {
+    text-transform: capitalize;
+}
+
+a {    
+    text-decoration: none;
+}
+
+.social-menu,
+dt,
+.items,
+input,
+textarea {
+    font-weight: bold;
 }
 
 /*
@@ -247,23 +262,27 @@ input[type="submit"],
   ========================================
 */
 
-input {
+input,
+textarea {
     outline: none;
-}
-
-body,
-a,
-input[type="submit"] {    
-    background: none;
-    color: rgba( 255, 255, 255, .8 );
 }
 
 input,
 textarea,
 .social-menu a {
     border-radius: 5px;
-    border-width: 3px;
+    border-width: 5px;
     border-style: double;
+}
+
+blockquote {
+    border-left: 5px double rgba( 255, 255, 255, .8 );
+}
+
+body,
+a,
+input[type="submit"] {
+    color: rgba( 255, 255, 255, .8 );
     border-color: rgba( 255, 255, 255, .8 );
 }
 
@@ -279,16 +298,10 @@ textarea {
     color: rgba( 255, 255, 255, .8 );
 }
 
-.items a,
-#fourth .feedback label {
+.items {
     text-shadow: 
-        0.5px 0.5px rgba( 254, 252, 255, 0.7 ), 
-        0.5px 0.5px rgba( 223, 190, 170, 0.6 );
-}
-
-input,
-textarea {
-    background-color: rgba( 254, 252, 255, 0.7 );
+        0.5px 0.5px rgba( 254, 252, 255, .7 ), 
+        0.5px 0.5px rgba( 223, 190, 170, .6 );
 }
 
 /*
@@ -297,11 +310,17 @@ textarea {
   ========================================
 */
 
-body { min-height: 1000px; }
+input,
+textarea {
+    background-color: rgba( 254, 252, 255, .9);
+}
+
+input[type="submit"] {    
+    background: none;
+}
 
 body {
     background-image: url( '../img/body.jpg' );
-    background-attachment: fixed;
 }
 
 body,
@@ -360,10 +379,6 @@ body,
     background-color: rgba( 255, 255, 255, .8 );
 }
 
-.social-menu a:hover {
-    border: 3px double rgba( 61, 60, 58, .7);
-}
-
 a:hover {
     text-decoration: underline;
 }
@@ -411,23 +426,40 @@ a:hover {
 
 .items a {
     background-image: 
-        linear-gradient( 0deg, 
-            rgba( 0, 0, 0, .1 ), 
-            rgba( 0, 0, 0, 0 ) 50%, 
-            rgba( 0, 0, 0, .1 ) ),  
-        linear-gradient( 0deg, 
-            rgba( 255, 255, 255, .1 ), 
-            rgba( 255, 255, 255, 0) 50%,
-            rgba( 255, 255, 255, .1) );
-    background-image: -webkit-radial-gradient(50% 100%, ellipse cover, 
-            rgba( 0, 0, 0, 0), rgba( 0, 0, 0, 0 ) 50% );
+        linear-gradient( to right,
+            rgba( 135, 173, 222, .2 ) 30%,
+            transparent );
 }
 
 /* Для повышения читаемости */
 .part {
-    background: -webkit-linear-gradient( to left, 
-        rgba( 142, 158, 171, 1 ), rgba(238, 242, 243, 1 ) );
-    
+    background-image: 
+        linear-gradient( to left, 
+            rgba( 72, 60, 50, .4 ), 
+            rgba( 49, 61, 71, .4 ) );    
+}
+
+/* Кроссбраузерный сдвиг вправо для интутов */
+input::-webkit-input-placeholder       { text-indent: 0px;   transition: text-indent 0.3s ease; }
+input::-moz-placeholder                { text-indent: 0px;   transition: text-indent 0.3s ease; }
+input:-moz-placeholder                 { text-indent: 0px;   transition: text-indent 0.3s ease; }
+input:-ms-input-placeholder            { text-indent: 0px;   transition: text-indent 0.3s ease; }
+input:focus::-webkit-input-placeholder { text-indent: 500px; transition: text-indent 0.3s ease; }
+input:focus::-moz-placeholder          { text-indent: 500px; transition: text-indent 0.3s ease; }
+input:focus:-moz-placeholder           { text-indent: 500px; transition: text-indent 0.3s ease; }
+input:focus:-ms-input-placeholder      { text-indent: 500px; transition: text-indent 0.3s ease; }
+
+/*
+  ========================================
+  Images
+  ========================================
+*/
+
+.photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    opacity: .8;
 }
 
 /*
@@ -435,6 +467,7 @@ a:hover {
   For IE and Edge personally
   ========================================
 */
+
 /* Так в IE не дергается фиксированный бэкграунд */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     html{
@@ -454,5 +487,6 @@ a:hover {
 #fourth::before {
     top: 0; right: 0; bottom: 0; left: 0;
     background-size: cover;
-    will-change: transform;
+    background-position: center;
+    /*will-change: transform;*/
 }
