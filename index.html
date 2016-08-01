@@ -1,9 +1,27 @@
 <!DOCTYPE html>
+<!--[if lt IE 7]>
+    <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+    <html class="no-js lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+    <html class="no-js lt-ie9" lang="en">
+<![endif]-->
+    <!--[if gt IE 8]>
+<!-->
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Awesome Portfolio</title>
-    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+    <meta name="description" content="Portfolio Template for webdesigner">    
+    <!-- Favicons-->
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">    
+    <!-- Fonts-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Styles-->
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/main.css">
   </head>
@@ -139,14 +157,17 @@
         <section id="fourth" class="part">
             <section>
                 <form class="feedback">
-                    <label>Name</label>
-                    <input name="name" placeholder="Type Here">
+                    <fieldset>
+                        <legend>Contact us...</legend>
+                        <label>Name</label>
+                        <input name="name" placeholder="Type Here">
 
-                    <label>Email</label>
-                    <input name="email" type="email" placeholder="Type Here">
-
-                    <label>Message</label>
-                    <textarea name="message" placeholder="Type Here"></textarea>
+                        <label>Email</label>
+                        <input name="email" type="email" placeholder="Type Here">
+            
+                        <label>Message</label>
+                        <textarea name="message" placeholder="Type Here"></textarea>
+                    </fieldset>
 
                     <input name="submit" type="submit" value="Submit">
                 </form>                
