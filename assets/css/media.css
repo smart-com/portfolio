@@ -6,6 +6,49 @@
 
     /* Отступы от верха */
     .part {
-        padding: 16vh 4vw;       
+        padding: 15vh 4vw;       
+    }
+} 
+
+@media( min-width: 768px ) and ( max-width: 1023px ) {
+
+    html {
+        font-size: 20px;
+    }
+
+    /* Выстраиваем социальные кнопки в горизонталь */
+    .social-menu a {
+        display: inline;
+    }
+
+    .items div {        
+        display: inline-block;
+    }
+
+    .items div {        
+        width: 40vw;
+        height: 15rem;
+        vertical-align: top;
+        margin-right: 3vw;
+    }
+
+    /* Отодвигаем первый пункт меню */
+    .top-menu nav a:first-child {
+        margin-right: 20vw;
+    }
+    
+    hr,
+    .social-menu,
+    .photo {
+        margin-top: 7vh;
+    }
+
+    /* Отступы от верха */
+    .part {
+        padding: 6vh 6vw;       
+    }
+
+    .feedback {
+        width: 60vw;
     }
 } 
