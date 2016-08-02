@@ -1,0 +1,2 @@
+1. В Edge не отображаются placeholder-ы для инпутов.
+ - https://connect.microsoft.com/IE/feedback/details/1627778/microsoft-edge-placeholder-bug
