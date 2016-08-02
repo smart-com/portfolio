@@ -1,0 +1,11 @@
+@media( min-width: 359px ) and ( max-width: 767px ) {
+
+    html {
+        font-size: 18px;
+    }
+
+    /* Отступы от верха */
+    .part {
+        padding: 16vh 4vw;       
+    }
+} 
