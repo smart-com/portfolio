@@ -4,7 +4,7 @@
  * such as widht, height, margin and padding, for example.
  * It means better seeing elements with equal sizes. 
  * Properly the design created without any template 
- * will be managed in the light way.
+ * will be managed in the lighter way.
  * Property all together there are in dev tools if I need them.
 /*
   ========================================
@@ -29,7 +29,7 @@
 }
 
 .top-menu nav a {
-    display: inline-block;
+    display: inline;
 }
 
 .part {
@@ -49,10 +49,28 @@ textarea,
  * ========================================
  */
 
+/* Ширина по содержимому */
+.top-menu nav {
+    width: fit-content;
+}
+
+/* Максимальная ширина контента */
+section section {
+    max-width: 1180px;
+}
+
+/* Реальная ширина контента */
+blockquote,
+.items div {
+    width: 87vw;
+}
+
+/* По ширине страницы */
 .top-menu {    
     width: 100vw;
 }
 
+/* По ширине контейнера */
 .items div a,
 label,
 input,
@@ -61,29 +79,21 @@ textarea,
     width: 100%;
 }
 
-section section {
-    max-width: 960px;
-}
-
-blockquote,
-.items div {
-    width: 85vw;
-}
-
-.top-menu nav {
-    width: fit-content;
-}
-
+/* На всю высоту вьюпорта */
 .part {
     min-height: 100vh;
 }
 
-.items div {
-    height: 50vh;
-}
-
+/* Высота по содержимому */
 .feedback {
     min-height: fit-content;
+}
+
+/* Высота задана только здесь 
+ * (потом картинки легче) 
+ */
+.items div {
+    height: 50vh;
 }
 
 /* 
@@ -91,33 +101,10 @@ blockquote,
  * ========================================
  */
 
-.top-menu {
-    margin-top: 3rem;
-}
-
-/* Отступы для социальных кнопок */
-hr,
-.social-menu,
-.photo {
-    margin-top: 16vh;
-}
+/* Отступы */
 
 .top-menu nav a {
-    padding: .5rem 1rem;
-}
-
-.part:not(:last-child) {
-    margin-top: -2rem;
-    margin-bottom: 10rem; 
-}
-
-.feedback {
-    padding: 1rem;
-}
-
-/* Отступы от верха */
-.part {
-    padding: 10vh 4vw;       
+    padding: .1rem 1rem;
 }
 
 .social-menu a,
@@ -129,6 +116,10 @@ dd,
 input,
 textarea { 
     padding: .2rem 1rem;
+}
+
+.feedback {
+    padding: .5rem;
 }
 
 /* 
@@ -164,22 +155,36 @@ textarea,
  * ========================================
  */
 
-.main-header::before,
-.items div::before,
-#fourth section:first-child::before {
-    content: '';
-    display: inline-block;
+/* Поле для меню */
+.top-menu {
+    margin-top: 1rem;
 }
 
-/* Отступ для заголовка */
-.main-header::before {
-    height: 25vh;
+/* Поле для заголовка */
+.main-header {
+    margin-top: 25vh;
+}
+
+/* Расстояние между страницами */
+.part:not(:last-child) {
+    margin-bottom: 5rem; 
+}
+
+/* Расстояние между заголовкаом и кнопками */
+hr,
+.social-menu,
+.photo {
+    margin-top: 16vh;
 }
 
 /* Отступ для карточек с работами */
-.items div::before {
-    vertical-align: bottom;
-    height: 8rem;
+.items div {
+   padding-top: 7rem;
+}
+
+/* Место для верхнего меню */
+.part {
+    padding: 10vh 4vw;       
 }
 
 /*
@@ -236,9 +241,17 @@ a {
     font-family: 'Gentium Book Basic', serif;
 }
 
+/* Выравнивание текста */
+
 .top-menu,
 header {
     text-align: center;
+}
+
+/* Настройки текста */
+
+a {    
+    text-decoration: none;
 }
 
 .top-menu a,
@@ -249,10 +262,6 @@ header {
 .items a,
 label {
     text-transform: capitalize;
-}
-
-a {    
-    text-decoration: none;
 }
 
 .social-menu,
@@ -269,11 +278,13 @@ textarea {
   ========================================
 */
 
+/* Сброс */
 input,
 textarea {
     outline: none;
 }
 
+/* Рамки */
 input,
 textarea,
 .social-menu a {
@@ -282,15 +293,25 @@ textarea,
     border-style: double;
 }
 
-blockquote {
-    border-left: 5px double rgba( 255, 255, 255, .8 );
+/* Цвета */
+
+body,
+a,
+.social-menu a,
+blockquote,
+input[type="submit"]
+.feedback {
+    color: rgba( 255, 255, 255, .8 );
 }
 
 body,
 a,
 input[type="submit"] {
-    color: rgba( 255, 255, 255, .8 );
     border-color: rgba( 255, 255, 255, .8 );
+}
+
+blockquote {
+    border-left: 5px double rgba( 255, 255, 255, .8 );
 }
 
 .items a,
@@ -298,11 +319,6 @@ input:not(:last-child),
 textarea {
     color: rgba( 61, 60, 58, .9 );
     border-color: rgba( 61, 60, 58, .9 );
-}
-
-.social-menu a,
-.feedback {
-    color: rgba( 255, 255, 255, .8 );
 }
 
 .items {
@@ -317,13 +333,13 @@ textarea {
   ========================================
 */
 
+input[type="submit"] {    
+    background: none;
+}
+
 input,
 textarea {
     background-color: rgba( 254, 252, 255, .9);
-}
-
-input[type="submit"] {    
-    background: none;
 }
 
 body {
@@ -339,7 +355,7 @@ body,
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     /*will-change: transform;*/
@@ -380,16 +396,18 @@ body,
   ========================================
 */
 
+/* Ссылки */
+a:hover {
+    text-decoration: underline;
+}
+
 .top-menu a:hover,
 .social-menu a:hover {
     color: rgba( 61, 60, 58, .7);
     background-color: rgba( 255, 255, 255, .8 );
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
+/* Градиенты */
 .top-menu,
 .feedback,
 .items div {
@@ -438,7 +456,7 @@ a:hover {
             transparent );
 }
 
-/* Для повышения читаемости */
+/* Для повышения читаемости :( */
 .part {
     background-image: 
         linear-gradient( to left, 
@@ -446,7 +464,7 @@ a:hover {
             rgba( 49, 61, 71, .4 ) );    
 }
 
-/* Кроссбраузерный сдвиг вправо для интутов */
+/* Кроссбраузерный (Кроме IE/Edge сдвиг вправо для интутов */
 input::-webkit-input-placeholder       { text-indent: 0px;   transition: text-indent 0.3s ease; }
 input::-moz-placeholder                { text-indent: 0px;   transition: text-indent 0.3s ease; }
 input:-moz-placeholder                 { text-indent: 0px;   transition: text-indent 0.3s ease; }
