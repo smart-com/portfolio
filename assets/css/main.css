@@ -176,7 +176,7 @@ textarea,
 
 /* Отступ для первого пункта */
 .top-menu a:first-child {
-    margin-right: 15vw;
+    margin-right: 14vw;
 }
 
 /* Поле для заголовка */
@@ -388,7 +388,7 @@ body,
 #second::before,
 #third::before,
 #fourth::before {
-    opacity: .9;
+    opacity: .7;
     z-index: -1;    
 }
 
@@ -419,12 +419,13 @@ body,
 */
 
 /* Ссылки */
-a:hover {
+.items a:hover {
     text-decoration: underline;
 }
 
 .top-menu a:hover,
-.social-menu a:hover {    
+.social-menu a:hover,
+input[type="submit"]:hover {    
     border-color: rgba( 61, 60, 58, .7);
     color: rgba( 61, 60, 58, .7);
     background-color: rgba( 255, 255, 255, .8 );
@@ -483,19 +484,9 @@ a:hover {
 .part {
     background-image: 
         linear-gradient( to left, 
-            rgba( 72, 60, 50, .4 ), 
-            rgba( 49, 61, 71, .4 ) );    
+            rgba( 52, 40, 44, .4 ), 
+            rgba( 39, 51, 47, .4 ) );    
 }
-
-/* Кроссбраузерный (Кроме IE/Edge сдвиг вправо для интутов */
-input::-webkit-input-placeholder       { text-indent: 0px;   transition: text-indent 0.3s ease; }
-input::-moz-placeholder                { text-indent: 0px;   transition: text-indent 0.3s ease; }
-input:-moz-placeholder                 { text-indent: 0px;   transition: text-indent 0.3s ease; }
-input:-ms-input-placeholder            { text-indent: 0px;   transition: text-indent 0.3s ease; }
-input:focus::-webkit-input-placeholder { text-indent: 500px; transition: text-indent 0.3s ease; }
-input:focus::-moz-placeholder          { text-indent: 500px; transition: text-indent 0.3s ease; }
-input:focus:-moz-placeholder           { text-indent: 500px; transition: text-indent 0.3s ease; }
-input:focus:-ms-input-placeholder      { text-indent: 500px; transition: text-indent 0.3s ease; }
 
 /*
   ========================================

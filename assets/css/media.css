@@ -11,11 +11,17 @@
     }
 }
 
-@media( min-width: 640px ) {    
+@media( min-width: 640px ) {
+
+    .social-menu {
+        display: flex;
+        justify-content: center;
+    }    
 
     .social-menu a {
-        display: inline-block;
-        width: fit-content;
+        flex-basis: auto;
+        margin: .1rem;
+        white-space: nowrap;
     }
 }
 
@@ -31,7 +37,7 @@
 
     /* Отступ для первого пункта */
     .top-menu a:first-child {
-        margin-right: 25vw;
+        margin-right: 7vw;
     }
 
     /* Расстояние между заголовкаом и кнопками */
@@ -59,7 +65,7 @@
 
     /* Отступ для первого пункта */
     .top-menu a:first-child {
-        margin-right: 26vw;
+        margin-right: 8vw;
     }
 
     /* Расстояние между заголовкаом и кнопками */
@@ -156,12 +162,11 @@
      * (потом картинки легче) 
      */
     .items div {
-        width: 43vw;
+        width: 42vw;
         height: 15rem;
         margin: .3rem;
         padding-top: 32%;
     }
-
 } 
 
 @media( min-width: 640px ) and ( max-width: 767px ) {
@@ -176,7 +181,7 @@
 
     /* Отступ для первого пункта */
     .top-menu a:first-child {
-        margin-right: 45vw;
+        margin-right: 30vw;
     }
 
     .social-menu a {
@@ -200,7 +205,7 @@
      * (потом картинки легче) 
      */
     .items div {
-        width: 43vw;
+        width: 42vw;
         height: 15rem;
         margin: .3rem;
         padding-top: 9rem;
@@ -239,11 +244,15 @@
      * (потом картинки легче) 
      */
     .items div {
-        width: 43vw;
+        width: 35vw;
         height: 15rem;
-        margin: .3rem;
+        margin: .5rem;
         padding-top: 9rem;
-    } 
+    }     
+
+    .items div a {
+        font-size: 17px;
+    }
 }
 
 @media( min-width: 992px ) and ( max-width: 1199px ) {
@@ -254,7 +263,7 @@
 
     /* Отступ для первого пункта */
     .top-menu a:first-child {
-        margin-right: 60vw;
+        margin-right: 50vw;
     }
 
     /* Расстояние между заголовкаом и кнопками */
@@ -306,7 +315,7 @@
 
     /* Отступ для первого пункта */
     .top-menu a:first-child {
-        margin-right: 64vw;
+        margin-right: 50vw;
     }
 
     /* Высота задана только здесь 
@@ -347,17 +356,21 @@
 
     /* Отступ для первого пункта */
     .top-menu a:first-child {
-        margin-right: 64vw;
+        margin-right: 50vw;
     }
 
     /* Высота задана только здесь 
      * (потом картинки легче) 
      */
     .items div {
-        width: 20vw;
-        height: 15rem;
-        margin: .4rem;
-        padding-top: 8rem;
+        width: 350px;
+        height: 400px;
+        margin: .5rem;
+        padding-top: 250px;
+    }
+
+    .items div a {
+        font-size: .8rem;
     }
 
     /* Реальная ширина контента */
@@ -413,16 +426,20 @@
      */
     .items div {
         width: 18vw;
-        height: 15rem;
+        height: 11rem;
         margin: .4rem;
-        padding-top: 8rem;
+        padding-top: 7rem;
+    }
+
+    .items div a {
+        font-size: .7rem;
     }
 
     /* вытягиваем картинку наверх */
     .about,
     blockquote,
     .competences {
-        width: 69vw;
+        width: 65vw;
         margin-right: 30vw;
     }
 
